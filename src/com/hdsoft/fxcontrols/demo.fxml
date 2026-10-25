@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.hdsoft.fxcontrols.PaginatedTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="579.0" prefWidth="1091.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hdsoft.fxcontrols.DemoController">
+   <children>
+      <!-- Everything below is editable in Scene Builder's Properties/Layout panels -->
+      <PaginatedTableView fx:id="peopleTable" columnDefinitions="Name=name:200; Email=email:260; Department=department:150; Age=age:80" defaultColumnWidth="150.0" dragAndDropEnabled="true" pageSizeOptions="5,10,25,50,75,100,125,150" rowsPerPage="10" searchFieldWidth="300.0" searchPromptText="Search employees..." tableHeight="380.0" title="Employees" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0">
+         <titleFont>
+            <Font name="System Bold" size="20.0" />
+         </titleFont>
+         <!--
+         Alternative to columnDefinitions - declare real columns:
+         <columns>
+            <TableColumn text="Name" prefWidth="200.0">
+               <cellValueFactory><PropertyValueFactory property="name" /></cellValueFactory>
+            </TableColumn>
+         </columns>
+         (needs <?import javafx.scene.control.TableColumn?> and <?import javafx.scene.control.cell.PropertyValueFactory?>)
+         -->
+      </PaginatedTableView>
+   </children>
+</AnchorPane>
